@@ -1,0 +1,136 @@
+{
+  "ReportGuid": "b685f7f7e1aa1fcabca5b7c14efdb540",
+  "ReportName": "Report",
+  "ReportAlias": "Report",
+  "ReportFile": "TestReport.mrt",
+  "ReportCreated": "/Date(1621960143000+0100)/",
+  "ReportChanged": "/Date(1621960390000+0100)/",
+  "EngineVersion": "EngineV2",
+  "CalculationMode": "Interpretation",
+  "ReportUnit": "Centimeters",
+  "PreviewSettings": 268435455,
+  "Dictionary": {
+    "Variables": {
+      "0": {
+        "Value": "denis.pujdak",
+        "Name": "Sys_CurrentUserName",
+        "Alias": "Sys_CurrentUserName",
+        "Type": "System.String",
+        "ReadOnly": true,
+        "Category": "System"
+      },
+      "1": {
+        "Value": "Denis Pujdak",
+        "Name": "Sys_CurrentUserFullName",
+        "Alias": "Sys_CurrentUserFullName",
+        "Type": "System.String",
+        "ReadOnly": true,
+        "Category": "System"
+      },
+      "2": {
+        "Value": "TDZ Technika dla zdrowia Sp z o.o.",
+        "Name": "Sys_CompanyName",
+        "Alias": "Sys_CompanyName",
+        "Type": "System.String",
+        "ReadOnly": true,
+        "Category": "System"
+      },
+      "3": {
+        "Value": "5/25/2021 5:29:03 PM",
+        "Name": "Sys_CurrentDate",
+        "Alias": "Sys_CurrentDate",
+        "Type": "System.DateTime",
+        "ReadOnly": true,
+        "Category": "System"
+      }
+    },
+    "DataSources": {
+      "0": {
+        "Ident": "StiDataTableSource",
+        "Name": "root",
+        "Alias": "root",
+        "Columns": {
+          "0": {
+            "Name": "name",
+            "Index": -1,
+            "NameInSource": "name",
+            "Alias": "name",
+            "Type": "System.String"
+          }
+        },
+        "NameInSource": "all.root"
+      }
+    },
+    "Databases": {
+      "0": {
+        "Ident": "StiODataDatabase",
+        "Name": "OpenData",
+        "Alias": "odata",
+        "ConnectionStringEncrypted": "2HD1K+dQWfVsEID063VyO9HYZytPTLv07Uu5"
+      },
+      "1": {
+        "Ident": "StiJsonDatabase",
+        "Name": "all",
+        "Alias": "all",
+        "PathData": "https://restcountries.eu/rest/v2/all"
+      }
+    }
+  },
+  "Pages": {
+    "0": {
+      "Ident": "StiPage",
+      "Name": "Page1",
+      "Guid": "2fdb787cb6dfdb30010fc02d8c4d0b2c",
+      "Interaction": {
+        "Ident": "StiInteraction"
+      },
+      "Border": ";;2;;;;;solid:Black",
+      "Brush": "solid:",
+      "Components": {
+        "0": {
+          "Ident": "StiDataBand",
+          "Name": "Dataroot",
+          "ClientRectangle": "0,0.4,19,0.8",
+          "Interaction": {
+            "Ident": "StiBandInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "Dataroot_name",
+              "CanGrow": true,
+              "ClientRectangle": "0,0,19,0.8",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{root.name}"
+              },
+              "VertAlignment": "Center",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "TextOptions": {
+                "WordWrap": true
+              }
+            }
+          },
+          "DataSourceName": "root"
+        }
+      },
+      "PageWidth": 21,
+      "PageHeight": 29.7,
+      "Watermark": {
+        "TextBrush": "solid:50,0,0,0"
+      },
+      "Margins": {
+        "Left": 1,
+        "Right": 1,
+        "Top": 1,
+        "Bottom": 1
+      }
+    }
+  }
+}
