@@ -1,0 +1,214 @@
+{
+  "ReportGuid": "0c33ea53cbe94703a8c3e8a6505b2b89",
+  "ReportName": "Report",
+  "ReportAlias": "Report",
+  "ReportFile": "Test 6.mrt",
+  "ReportCreated": "/Date(1622043665000+0100)/",
+  "ReportChanged": "/Date(1622048082000+0100)/",
+  "EngineVersion": "EngineV2",
+  "CalculationMode": "Interpretation",
+  "ReportUnit": "Centimeters",
+  "PreviewSettings": 268435455,
+  "Dictionary": {
+    "Variables": {
+      "0": {
+        "Value": "denis.pujdak",
+        "Name": "Sys_CurrentUserName",
+        "Alias": "Sys_CurrentUserName",
+        "Type": "System.String",
+        "ReadOnly": true,
+        "Category": "System"
+      },
+      "1": {
+        "Value": "Denis Pujdak",
+        "Name": "Sys_CurrentUserFullName",
+        "Alias": "Sys_CurrentUserFullName",
+        "Type": "System.String",
+        "ReadOnly": true,
+        "Category": "System"
+      },
+      "2": {
+        "Value": "TDZ Technika dla zdrowia Sp z o.o.",
+        "Name": "Sys_CompanyName",
+        "Alias": "Sys_CompanyName",
+        "Type": "System.String",
+        "ReadOnly": true,
+        "Category": "System"
+      },
+      "3": {
+        "Value": "5/26/2021 4:41:05 PM",
+        "Name": "Sys_CurrentDate",
+        "Alias": "Sys_CurrentDate",
+        "Type": "System.DateTime",
+        "ReadOnly": true,
+        "Category": "System"
+      }
+    },
+    "DataSources": {
+      "0": {
+        "Ident": "StiDataTableSource",
+        "Name": "root",
+        "Alias": "root",
+        "Columns": {
+          "0": {
+            "Name": "date",
+            "Index": -1,
+            "NameInSource": "date",
+            "Alias": "date",
+            "Type": "System.DateTime"
+          },
+          "1": {
+            "Name": "summary",
+            "Index": -1,
+            "NameInSource": "summary",
+            "Alias": "summary",
+            "Type": "System.String"
+          },
+          "2": {
+            "Name": "temperatureC",
+            "Index": -1,
+            "NameInSource": "temperatureC",
+            "Alias": "temperatureC",
+            "Type": "System.Decimal"
+          },
+          "3": {
+            "Name": "temperatureF",
+            "Index": -1,
+            "NameInSource": "temperatureF",
+            "Alias": "temperatureF",
+            "Type": "System.Decimal"
+          }
+        },
+        "NameInSource": "weatherforecast.root"
+      }
+    },
+    "Databases": {
+      "0": {
+        "Ident": "StiODataDatabase",
+        "Name": "OpenData",
+        "Alias": "odata",
+        "ConnectionStringEncrypted": "2HD1K+dQWfVsEID063VyO9HYZytPTLv07Uu5"
+      },
+      "1": {
+        "Ident": "StiJsonDatabase",
+        "Name": "weatherforecast",
+        "Alias": "weatherforecast",
+        "PathData": "https://localhost:5001/weatherforecast"
+      }
+    }
+  },
+  "Pages": {
+    "0": {
+      "Ident": "StiPage",
+      "Name": "Page1",
+      "Guid": "257e264dce3c3a6f1cc4b3f509a46134",
+      "Interaction": {
+        "Ident": "StiInteraction"
+      },
+      "Border": ";;2;;;;;solid:Black",
+      "Brush": "solid:",
+      "Components": {
+        "0": {
+          "Ident": "StiDataBand",
+          "Name": "Dataroot",
+          "ClientRectangle": "0,0.4,19,0.8",
+          "Interaction": {
+            "Ident": "StiBandInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "Dataroot_date",
+              "CanGrow": true,
+              "ClientRectangle": "0,0,4.8,0.8",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{root.date}"
+              },
+              "VertAlignment": "Center",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "TextOptions": {
+                "WordWrap": true
+              }
+            },
+            "1": {
+              "Ident": "StiText",
+              "Name": "Dataroot_summary",
+              "CanGrow": true,
+              "ClientRectangle": "4.8,0,4.8,0.8",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{root.summary}"
+              },
+              "VertAlignment": "Center",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "TextOptions": {
+                "WordWrap": true
+              }
+            },
+            "2": {
+              "Ident": "StiText",
+              "Name": "Dataroot_temperatureC",
+              "CanGrow": true,
+              "ClientRectangle": "9.6,0,4.8,0.8",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{root.temperatureC}"
+              },
+              "VertAlignment": "Center",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "TextOptions": {
+                "WordWrap": true
+              }
+            },
+            "3": {
+              "Ident": "StiText",
+              "Name": "Dataroot_temperatureF",
+              "CanGrow": true,
+              "ClientRectangle": "14.4,0,4.6,0.8",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{root.temperatureF}"
+              },
+              "VertAlignment": "Center",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "TextOptions": {
+                "WordWrap": true
+              }
+            }
+          },
+          "DataSourceName": "root"
+        }
+      },
+      "PageWidth": 21,
+      "PageHeight": 29.7,
+      "Watermark": {
+        "TextBrush": "solid:50,0,0,0"
+      },
+      "Margins": {
+        "Left": 1,
+        "Right": 1,
+        "Top": 1,
+        "Bottom": 1
+      }
+    }
+  }
+}
