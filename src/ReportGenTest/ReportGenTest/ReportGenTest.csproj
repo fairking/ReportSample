@@ -5,7 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Stimulsoft.Reports.Web.NetCore" Version="2021.3.1" />
+    <PackageReference Include="Microsoft.AspNetCore.OData" Version="7.5.8" />
+    <PackageReference Include="Stimulsoft.Reports.Web.NetCore" Version="2021.3.2" />
   </ItemGroup>
 
   <ItemGroup>
@@ -13,6 +14,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Update="TestReport2.mrt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="TestReport3.mrt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>

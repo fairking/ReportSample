@@ -1,8 +1,11 @@
+using Microsoft.AspNet.OData.Builder;
+using Microsoft.AspNet.OData.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.OData.Edm;
 
 namespace ReportGenTest
 {
@@ -28,6 +31,10 @@ namespace ReportGenTest
             });
 
             services.AddControllers();
+
+            services.AddRouting();
+
+            services.AddOData();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,7 +56,15 @@ namespace ReportGenTest
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapODataRoute("odata", "odata", GetEdmModel());
             });
+        }
+
+        private static IEdmModel GetEdmModel()
+        {
+            var builder = new ODataConventionModelBuilder();
+            builder.EntitySet<WeatherForecast>("WeatherForecast");
+            return builder.GetEdmModel();
         }
     }
 }

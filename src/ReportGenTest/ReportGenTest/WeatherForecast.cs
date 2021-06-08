@@ -1,9 +1,13 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace ReportGenTest
 {
     public class WeatherForecast
     {
+        [Key]
+        public Guid Id { get; set; }
+
         public DateTime Date { get; set; }
 
         public int TemperatureC { get; set; }

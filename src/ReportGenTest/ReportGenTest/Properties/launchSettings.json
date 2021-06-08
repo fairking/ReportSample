@@ -20,7 +20,7 @@
     "ReportGenTest": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "report?name=TestReport2",
+      "launchUrl": "report?name=TestReport3",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },

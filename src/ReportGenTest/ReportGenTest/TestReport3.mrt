@@ -1,0 +1,184 @@
+{
+  "ReportVersion": "2021.3.2.0",
+  "ReportGuid": "cd86567b0a7f4bbdad78cb6a28a44422",
+  "ReportName": "Report",
+  "ReportAlias": "Report",
+  "ReportCreated": "/Date(1623153948000+0100)/",
+  "ReportChanged": "/Date(1623154052064+0100)/",
+  "EngineVersion": "EngineV2",
+  "Script": "using System;\r\nusing System.Drawing;\r\nusing System.Windows.Forms;\r\nusing System.Data;\r\nusing Stimulsoft.Controls;\r\nusing Stimulsoft.Base.Drawing;\r\nusing Stimulsoft.Report;\r\nusing Stimulsoft.Report.Dialogs;\r\nusing Stimulsoft.Report.Components;\r\n\r\nnamespace Reports\r\n{\r\n    public class Report : Stimulsoft.Report.StiReport\r\n    {\r\n        public Report()        {\r\n            this.InitializeComponent();\r\n        }\r\n\r\n        #region StiReport Designer generated code - do not modify\r\n\t\t#endregion StiReport Designer generated code - do not modify\r\n    }\r\n}\r\n",
+  "ReferencedAssemblies": {
+    "0": "System.Dll",
+    "1": "System.Drawing.Dll",
+    "2": "System.Windows.Forms.Dll",
+    "3": "System.Data.Dll",
+    "4": "System.Xml.Dll",
+    "5": "Stimulsoft.Controls.Dll",
+    "6": "Stimulsoft.Base.Dll",
+    "7": "Stimulsoft.Report.Dll"
+  },
+  "Dictionary": {
+    "DataSources": {
+      "0": {
+        "Ident": "StiODataSource",
+        "Name": "WeatherForecast",
+        "Alias": "WeatherForecast",
+        "Key": "0bb9517e70db45bba67815c0fc3ba0b2",
+        "Columns": {
+          "0": {
+            "Name": "Id",
+            "Index": -1,
+            "NameInSource": "Id",
+            "Alias": "Id",
+            "Type": "System.Guid"
+          },
+          "1": {
+            "Name": "Date",
+            "Index": -1,
+            "NameInSource": "Date",
+            "Alias": "Date",
+            "Type": "System.DateTimeOffset"
+          },
+          "2": {
+            "Name": "TemperatureC",
+            "Index": -1,
+            "NameInSource": "TemperatureC",
+            "Alias": "TemperatureC",
+            "Type": "System.Int32"
+          },
+          "3": {
+            "Name": "Summary",
+            "Index": -1,
+            "NameInSource": "Summary",
+            "Alias": "Summary",
+            "Type": "System.String"
+          }
+        },
+        "NameInSource": "OData",
+        "SqlCommand": "WeatherForecast"
+      }
+    },
+    "Databases": {
+      "0": {
+        "Ident": "StiODataDatabase",
+        "Name": "OData",
+        "Alias": "OData",
+        "ConnectionStringEncrypted": "2HDNK2dQWfRsHYD46wlyO9Fa9ctPV3ugage5+A=="
+      }
+    }
+  },
+  "Pages": {
+    "0": {
+      "Ident": "StiPage",
+      "Name": "Page1",
+      "Guid": "b522bdec43354b36a2bda42a894f81d0",
+      "Interaction": {
+        "Ident": "StiInteraction"
+      },
+      "Border": ";;2;;;;;solid:Black",
+      "Brush": "solid:",
+      "Components": {
+        "0": {
+          "Ident": "StiDataBand",
+          "Name": "DataWeatherForecast",
+          "ClientRectangle": "0,0.4,19,0.8",
+          "Interaction": {
+            "Ident": "StiBandInteraction"
+          },
+          "Border": ";;;;;;;solid:Black",
+          "Brush": "solid:",
+          "Components": {
+            "0": {
+              "Ident": "StiText",
+              "Name": "DataWeatherForecast_Id",
+              "CanGrow": true,
+              "ClientRectangle": "0,0,4.8,0.8",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{WeatherForecast.Id}"
+              },
+              "VertAlignment": "Center",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "TextOptions": {
+                "WordWrap": true
+              }
+            },
+            "1": {
+              "Ident": "StiText",
+              "Name": "DataWeatherForecast_Date",
+              "CanGrow": true,
+              "ClientRectangle": "4.8,0,4.8,0.8",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{WeatherForecast.Date}"
+              },
+              "VertAlignment": "Center",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "TextOptions": {
+                "WordWrap": true
+              }
+            },
+            "2": {
+              "Ident": "StiText",
+              "Name": "DataWeatherForecast_TemperatureC",
+              "CanGrow": true,
+              "ClientRectangle": "9.6,0,4.8,0.8",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{WeatherForecast.TemperatureC}"
+              },
+              "VertAlignment": "Center",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "TextOptions": {
+                "WordWrap": true
+              }
+            },
+            "3": {
+              "Ident": "StiText",
+              "Name": "DataWeatherForecast_Summary",
+              "CanGrow": true,
+              "ClientRectangle": "14.4,0,4.6,0.8",
+              "Interaction": {
+                "Ident": "StiInteraction"
+              },
+              "Text": {
+                "Value": "{WeatherForecast.Summary}"
+              },
+              "VertAlignment": "Center",
+              "Border": ";;;;;;;solid:Black",
+              "Brush": "solid:",
+              "TextBrush": "solid:Black",
+              "TextOptions": {
+                "WordWrap": true
+              }
+            }
+          },
+          "DataSourceName": "WeatherForecast"
+        }
+      },
+      "PageWidth": 21.0,
+      "PageHeight": 29.7,
+      "Watermark": {
+        "TextBrush": "solid:50,0,0,0"
+      },
+      "Margins": {
+        "Left": 1.0,
+        "Right": 1.0,
+        "Top": 1.0,
+        "Bottom": 1.0
+      }
+    }
+  }
+}
