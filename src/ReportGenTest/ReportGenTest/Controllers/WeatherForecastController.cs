@@ -36,8 +36,13 @@ namespace ReportGenTest.Controllers
             // It must throw an exception during the report rendering.
             if (!this.Request.Headers.TryGetValue(HttpRequestHeader.Authorization.ToString(), out var auth) || auth.FirstOrDefault() != "Bearer ABC")
             {
-                HttpContext.Response.StatusCode = (int)HttpStatusCode.Unauthorized;
-                return new WeatherForecast[0];
+                //HttpContext.Response.StatusCode = (int)HttpStatusCode.Unauthorized;
+                //return new WeatherForecast[0];
+                Console.WriteLine("Authorization Failed!!!");
+            }
+            else
+            {
+                Console.WriteLine("Authorization Passed!!!");
             }
 
             return WeatherForecastDataGenerator.GetData();
