@@ -34,11 +34,11 @@ namespace ReportGenTest.Controllers
 
             // Validate Authorization
             // It must throw an exception during the report rendering.
-            //if (!this.Request.Headers.TryGetValue(HttpRequestHeader.Authorization.ToString(), out var auth) || auth.FirstOrDefault() != "Bearer ABC")
-            //{
-            //    HttpContext.Response.StatusCode = (int)HttpStatusCode.Unauthorized;
-            //    return new WeatherForecast[0];
-            //}
+            if (!this.Request.Headers.TryGetValue(HttpRequestHeader.Authorization.ToString(), out var auth) || auth.FirstOrDefault() != "Bearer ABC")
+            {
+                HttpContext.Response.StatusCode = (int)HttpStatusCode.Unauthorized;
+                return new WeatherForecast[0];
+            }
 
             return WeatherForecastDataGenerator.GetData();
         }
